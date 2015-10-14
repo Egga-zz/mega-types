@@ -6,7 +6,6 @@ public class PositiveInteger extends Value<Integer> {
 
     public PositiveInteger(Integer value) {
         super(value);
-        validate(value);
     }
 
     public void validate(Integer value) {

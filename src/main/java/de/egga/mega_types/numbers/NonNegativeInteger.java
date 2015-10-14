@@ -6,7 +6,6 @@ public class NonNegativeInteger extends Value<Integer> {
 
     public NonNegativeInteger(Integer value) {
         super(value);
-        validate(value);
     }
 
     @Override

@@ -9,7 +9,6 @@ public abstract class EmailAddress extends Value<String>{
 
     public EmailAddress(String value) {
         super(value);
-        validate(value  );
     }
 
     abstract Pattern getValidationPattern();

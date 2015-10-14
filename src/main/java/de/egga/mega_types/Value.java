@@ -5,11 +5,15 @@ public abstract class Value<T> {
     private T value;
 
     public Value(T value) {
+        this.value = value;
+        assertThatValueIsNotNull();
+        validate(value);
+    }
+
+    private void assertThatValueIsNotNull() {
         if (value == null) {
             throw new IllegalArgumentException();
         }
-
-        this.value = value;
     }
 
     public abstract void validate(T value);
