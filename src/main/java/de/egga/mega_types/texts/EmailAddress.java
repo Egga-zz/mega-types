@@ -1,6 +1,23 @@
 package de.egga.mega_types.texts;
 
-public interface EmailAddress {
+import de.egga.mega_types.Value;
 
-    String getValue();
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public abstract class EmailAddress extends Value<String>{
+
+    public EmailAddress(String value) {
+        super(value);
+        validate(value  );
+    }
+
+    abstract Pattern getValidationPattern();
+
+    public void validate(String value) {
+        Matcher matcher = getValidationPattern().matcher(value);
+        if (!matcher.matches()) {
+            throw new IllegalArgumentException();
+        }
+    }
 }
