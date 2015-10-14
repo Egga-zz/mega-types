@@ -1,21 +1,16 @@
 package de.egga.mega_types.numbers;
 
-public class NonNegativeInteger {
+public class NonNegativeInteger extends Number {
 
-    private int value;
+    public NonNegativeInteger(int value) {
+        super(value);
+        validate(value);
+    }
 
+    @Override
     public void validate(int value) {
         if (value < 0) {
             throw new IllegalArgumentException();
         }
-    }
-
-    public NonNegativeInteger(int value) {
-        validate(value);
-        this.value = value;
-    }
-
-    public int getValue() {
-        return value;
     }
 }
