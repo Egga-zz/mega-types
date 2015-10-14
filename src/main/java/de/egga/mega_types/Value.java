@@ -10,15 +10,15 @@ public abstract class Value<T> {
         validate();
     }
 
-    private void assertThatValueIsNotNull() {
-        if (value == null) {
-            throw new IllegalArgumentException();
-        }
-    }
-
     public abstract void validate();
 
     public T getValue() {
         return value;
+    }
+
+    private void assertThatValueIsNotNull() {
+        if (value == null) {
+            throw new IllegalArgumentException();
+        }
     }
 }
