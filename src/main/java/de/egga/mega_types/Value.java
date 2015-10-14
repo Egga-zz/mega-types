@@ -7,7 +7,7 @@ public abstract class Value<T> {
     public Value(T value) {
         this.value = value;
         assertThatValueIsNotNull();
-        validate(value);
+        validate();
     }
 
     private void assertThatValueIsNotNull() {
@@ -16,7 +16,7 @@ public abstract class Value<T> {
         }
     }
 
-    public abstract void validate(T value);
+    public abstract void validate();
 
     public T getValue() {
         return value;

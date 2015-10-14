@@ -13,8 +13,8 @@ public abstract class EmailAddress extends Value<String>{
 
     abstract Pattern getValidationPattern();
 
-    public void validate(String value) {
-        Matcher matcher = getValidationPattern().matcher(value);
+    public void validate() {
+        Matcher matcher = getValidationPattern().matcher(getValue());
         if (!matcher.matches()) {
             throw new IllegalArgumentException();
         }

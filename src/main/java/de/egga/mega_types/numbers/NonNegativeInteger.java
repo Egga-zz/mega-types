@@ -9,8 +9,8 @@ public class NonNegativeInteger extends Value<Integer> {
     }
 
     @Override
-    public void validate(Integer value) {
-        if (value < 0) {
+    public void validate() {
+        if (getValue() < 0) {
             throw new IllegalArgumentException();
         }
     }

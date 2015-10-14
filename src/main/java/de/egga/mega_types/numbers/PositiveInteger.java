@@ -8,8 +8,8 @@ public class PositiveInteger extends Value<Integer> {
         super(value);
     }
 
-    public void validate(Integer value) {
-        if (value < 1) {
+    public void validate() {
+        if (getValue() < 1) {
             throw new IllegalArgumentException();
         }
     }
