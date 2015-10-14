@@ -3,6 +3,7 @@ package de.egga.mega_types;
 import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
 import de.egga.mega_types.texts.EmailAddress;
+import de.egga.mega_types.texts.NonEmptyString;
 import de.egga.mega_types.texts.Rfc822CompliantEmailAddress;
 import org.junit.Test;
 
@@ -19,6 +20,7 @@ public class MegaTypesTest {
     public void pos_int_should_return_proper_type() {
         assertThat(MegaTypes.posInt(1)).isInstanceOf(PositiveInteger.class);
     }
+
     @Test
     public void non_negative_integer_should_return_proper_type() {
         assertThat(MegaTypes.nonNegativeInteger(1)).isInstanceOf(NonNegativeInteger.class);
@@ -37,6 +39,11 @@ public class MegaTypesTest {
     @Test
     public void rfc_compliant_email_address_should_return_proper_type() {
         assertThat(MegaTypes.rfc822CompliantEmailAddress("types@egga.de")).isInstanceOf(Rfc822CompliantEmailAddress.class);
+    }
+
+    @Test
+    public void non_empty_string_should_return_proper_type() {
+        assertThat(MegaTypes.nonEmptyString("egga")).isInstanceOf(NonEmptyString.class);
     }
 
 

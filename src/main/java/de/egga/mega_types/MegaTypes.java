@@ -3,6 +3,7 @@ package de.egga.mega_types;
 import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
 import de.egga.mega_types.texts.EmailAddress;
+import de.egga.mega_types.texts.NonEmptyString;
 import de.egga.mega_types.texts.Rfc822CompliantEmailAddress;
 import de.egga.mega_types.texts.SimpleEmailAddress;
 
@@ -31,5 +32,9 @@ public class MegaTypes {
 
     public static EmailAddress rfc822CompliantEmailAddress(String value) {
         return new Rfc822CompliantEmailAddress(value);
+    }
+
+    public static NonEmptyString nonEmptyString(String value) {
+        return new NonEmptyString(value);
     }
 }
