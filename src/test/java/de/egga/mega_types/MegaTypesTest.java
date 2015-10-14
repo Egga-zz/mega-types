@@ -1,5 +1,6 @@
 package de.egga.mega_types;
 
+import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
 import org.junit.Test;
 
@@ -8,14 +9,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MegaTypesTest {
 
     @Test
-    public void pos_int_should_return_positive_integer() {
-        PositiveInteger posInt = MegaTypes.posInt(1);
-        assertThat(posInt).isInstanceOf(PositiveInteger.class);
+    public void positive_integer_should_return_proper_type() {
+        assertThat(MegaTypes.positiveInteger(1)).isInstanceOf(PositiveInteger.class);
     }
 
     @Test
-    public void positive_integer_should_return_positive_integer() {
-        PositiveInteger posInt = MegaTypes.positiveInteger(1);
-        assertThat(posInt).isInstanceOf(PositiveInteger.class);
+    public void pos_int_should_return_proper_type() {
+        assertThat(MegaTypes.posInt(1)).isInstanceOf(PositiveInteger.class);
+    }
+    @Test
+    public void non_negative_integer_should_return_proper_type() {
+        assertThat(MegaTypes.nonNegativeInteger(1)).isInstanceOf(NonNegativeInteger.class);
+    }
+
+    @Test
+    public void non_neg_int_should_return_proper_type() {
+        assertThat(MegaTypes.nonNegInt(1)).isInstanceOf(NonNegativeInteger.class);
     }
 }
