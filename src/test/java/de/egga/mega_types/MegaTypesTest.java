@@ -2,6 +2,7 @@ package de.egga.mega_types;
 
 import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
+import de.egga.mega_types.texts.EmailAddress;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,4 +27,11 @@ public class MegaTypesTest {
     public void non_neg_int_should_return_proper_type() {
         assertThat(MegaTypes.nonNegInt(1)).isInstanceOf(NonNegativeInteger.class);
     }
+
+    @Test
+    public void simple_mail_address_should_return_proper_type() {
+        assertThat(MegaTypes.simpleEmailAdress("types@egga.de")).isInstanceOf(EmailAddress.class);
+    }
+
+
 }

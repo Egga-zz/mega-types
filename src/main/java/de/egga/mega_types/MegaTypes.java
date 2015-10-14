@@ -2,6 +2,8 @@ package de.egga.mega_types;
 
 import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
+import de.egga.mega_types.texts.EmailAddress;
+import de.egga.mega_types.texts.SimpleEmailAddress;
 
 public class MegaTypes {
 
@@ -19,5 +21,10 @@ public class MegaTypes {
 
     public static NonNegativeInteger nonNegInt(int value) {
         return nonNegativeInteger(value);
+    }
+
+
+    public static EmailAddress simpleEmailAdress(String value) {
+        return new SimpleEmailAddress(value);
     }
 }
