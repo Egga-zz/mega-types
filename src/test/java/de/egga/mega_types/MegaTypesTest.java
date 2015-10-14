@@ -29,7 +29,7 @@ public class MegaTypesTest {
     }
 
     @Test
-    public void simple_mail_address_should_return_proper_type() {
+    public void simple_email_address_should_return_proper_type() {
         assertThat(MegaTypes.simpleEmailAdress("types@egga.de")).isInstanceOf(EmailAddress.class);
     }
 
