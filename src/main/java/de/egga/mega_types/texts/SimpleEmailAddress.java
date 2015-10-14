@@ -6,7 +6,7 @@ public class SimpleEmailAddress implements EmailAddress {
 
     public static final Pattern VALIDATION_PATTERN = Pattern.compile("[^@]+\\@[^.]+[.].+");
 
-    public static void validate(String value) {
+    public void validate(String value) {
         if (!VALIDATION_PATTERN.matcher(value).matches()) {
             throw new IllegalArgumentException();
         }

@@ -2,7 +2,7 @@ package de.egga.mega_types.numbers;
 
 public class PositiveInteger {
 
-    public static void validate(int value) {
+    public void validate(int value) {
         if (value < 1) {
             throw new IllegalArgumentException();
         }

@@ -4,7 +4,7 @@ public class NonNegativeInteger {
 
     private int value;
 
-    public static void validate(int value) {
+    public void validate(int value) {
         if (value < 0) {
             throw new IllegalArgumentException();
         }
