@@ -1,6 +1,8 @@
 package de.egga.mega_types.numbers;
 
-public class PositiveInteger extends Number{
+import de.egga.mega_types.Value;
+
+public class PositiveInteger extends Value<Integer> {
 
     public PositiveInteger(Integer value) {
         super(value);

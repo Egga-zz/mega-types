@@ -1,6 +1,8 @@
 package de.egga.mega_types.numbers;
 
-public class NonNegativeInteger extends Number {
+import de.egga.mega_types.Value;
+
+public class NonNegativeInteger extends Value<Integer> {
 
     public NonNegativeInteger(Integer value) {
         super(value);
