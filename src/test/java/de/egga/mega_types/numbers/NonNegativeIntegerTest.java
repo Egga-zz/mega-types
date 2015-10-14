@@ -21,4 +21,9 @@ public class NonNegativeIntegerTest {
     public void it_should_not_fail_on_zero() {
          new NonNegativeInteger(0);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void it_should_fail_on_null() {
+         new NonNegativeInteger(null);
+    }
 }
