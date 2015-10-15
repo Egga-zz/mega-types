@@ -1,5 +1,6 @@
 package de.egga.mega_types;
 
+import de.egga.mega_types.numbers.IntegerRange;
 import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
 import de.egga.mega_types.texts.email.EmailAddress;
@@ -50,5 +51,11 @@ public class MegaTypesTest {
     @Test
     public void printable_ascii_string_should_return_proper_type() {
         assertThat(MegaTypes.printableAsciiString("egga")).isInstanceOf(PrintableAsciiString.class);
+    }
+
+    @Test
+    public void integer_range_should_return_proper_type() {
+        Object range = MegaTypes.integerRange(1, 100);
+        assertThat(range).isInstanceOf(IntegerRange.class);
     }
 }

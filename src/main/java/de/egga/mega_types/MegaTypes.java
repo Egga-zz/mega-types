@@ -1,5 +1,6 @@
 package de.egga.mega_types;
 
+import de.egga.mega_types.numbers.IntegerRange;
 import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
 import de.egga.mega_types.texts.*;
@@ -40,5 +41,9 @@ public class MegaTypes {
 
     public static PrintableAsciiString printableAsciiString(String value) {
         return new PrintableAsciiString(value);
+    }
+
+    public static IntegerRange integerRange(Integer start, Integer end) {
+        return new IntegerRange(start, end);
     }
 }
