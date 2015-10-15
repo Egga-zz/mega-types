@@ -4,6 +4,7 @@ import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
 import de.egga.mega_types.texts.EmailAddress;
 import de.egga.mega_types.texts.NonEmptyString;
+import de.egga.mega_types.texts.PrintableAsciiString;
 import de.egga.mega_types.texts.Rfc822CompliantEmailAddress;
 import org.junit.Test;
 
@@ -46,5 +47,8 @@ public class MegaTypesTest {
         assertThat(MegaTypes.nonEmptyString("egga")).isInstanceOf(NonEmptyString.class);
     }
 
-
+    @Test
+    public void printable_ascii_string_should_return_proper_type() {
+        assertThat(MegaTypes.printableAsciiString("egga")).isInstanceOf(PrintableAsciiString.class);
+    }
 }
