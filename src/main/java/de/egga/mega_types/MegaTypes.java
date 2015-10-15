@@ -3,6 +3,9 @@ package de.egga.mega_types;
 import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
 import de.egga.mega_types.texts.*;
+import de.egga.mega_types.texts.email.EmailAddress;
+import de.egga.mega_types.texts.email.Rfc822CompliantEmailAddress;
+import de.egga.mega_types.texts.email.SimpleEmailAddress;
 
 public class MegaTypes {
 

@@ -1,4 +1,4 @@
-package de.egga.mega_types.texts;
+package de.egga.mega_types.texts.email;
 
 import org.junit.Test;
 

@@ -2,10 +2,10 @@ package de.egga.mega_types;
 
 import de.egga.mega_types.numbers.NonNegativeInteger;
 import de.egga.mega_types.numbers.PositiveInteger;
-import de.egga.mega_types.texts.EmailAddress;
+import de.egga.mega_types.texts.email.EmailAddress;
 import de.egga.mega_types.texts.NonEmptyString;
 import de.egga.mega_types.texts.PrintableAsciiString;
-import de.egga.mega_types.texts.Rfc822CompliantEmailAddress;
+import de.egga.mega_types.texts.email.Rfc822CompliantEmailAddress;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

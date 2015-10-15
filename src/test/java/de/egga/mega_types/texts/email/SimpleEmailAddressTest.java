@@ -1,5 +1,7 @@
-package de.egga.mega_types.texts;
+package de.egga.mega_types.texts.email;
 
+import de.egga.mega_types.texts.email.EmailAddress;
+import de.egga.mega_types.texts.email.SimpleEmailAddress;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
