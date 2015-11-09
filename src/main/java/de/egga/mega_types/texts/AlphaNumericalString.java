@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class AlphaNumericalString extends Value<String> {
 
-    public static final Pattern VALIDATION_PATTERN = Pattern.compile("^[a-zA-Z0-9]$");
+    public static final Pattern VALIDATION_PATTERN = Pattern.compile("^[a-zA-Z0-9]*$");
 
     public AlphaNumericalString(String value) {
         super(value);

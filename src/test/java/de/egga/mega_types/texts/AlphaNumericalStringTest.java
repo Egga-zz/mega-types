@@ -8,10 +8,10 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.fail;
 
 @RunWith(Parameterized.class)
 public class AlphaNumericalStringTest {
+
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
@@ -30,11 +30,6 @@ public class AlphaNumericalStringTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void it_should_fail_on_special_chars() {
-        try {
-            new AlphaNumericalString(character);
-            fail("didn't throw an exception!");
-        } catch (IllegalArgumentException e) {
-            // Test succeded!
-        }
+        new AlphaNumericalString(character);
     }
 }
